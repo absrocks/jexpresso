@@ -660,7 +660,7 @@ function _build_rhs!(RHS, u, params, time)
     end
 end
 
-function inviscid_rhs_el!(u, params, connijk, qe, coords, lsource, S_micro_vec, qn_vec, flux_lw_vec, flux_sw_vec, SD::NSD_1D)
+function inviscid_rhs_el!(u, params, connijk, qe, coords, lsource, S_micro_vec, qn_vec, flux_lw_vec, flux_sw_vec, SD::NSD_1D, ::Val{false})
     
     u2uaux!(@view(params.uaux[:,:]), u, params.neqs, params.mesh.npoin)
 
@@ -711,7 +711,7 @@ function inviscid_rhs_el!(u, params,
                           qe::Matrix{Float64},
                           coords, 
                           lsource, S_micro_vec, qn_vec, flux_lw_vec,
-                          flux_sw_vec, SD::NSD_2D)
+                          flux_sw_vec, SD::NSD_2D, ::Val{false})
     
     ngl   = params.mesh.ngl
     nelem = params.mesh.nelem
