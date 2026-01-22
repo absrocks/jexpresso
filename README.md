@@ -29,9 +29,23 @@ A CPU and GPU research software for the numerical solution of a system of arbitr
 Suggested Julia version: 1.11.2 or higher.
 
 # Installation:
-Use the installer as described in [INSTALLATION.md](INSTALLATION.md)
+
+## Current Installation Method
+
+Jexpresso is currently being prepared for registration in the Julia General Registry. For now, please use the manual installation method described in [INSTALLATION.md](INSTALLATION.md).
 
 The installer will install all the necessary packages with the correct versions.
+
+## Future Installation (After Registry Approval)
+
+Once registered, you will be able to install Jexpresso directly with:
+
+```julia
+using Pkg
+Pkg.add("Jexpresso")
+```
+
+For information about the registration process, see [REGISTRATION.md](REGISTRATION.md).
 
 Jexpresso uses a few packages whose latest version may be incompatible. Please, enfornce the installation of the following versions:
 
